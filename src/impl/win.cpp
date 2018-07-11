@@ -460,6 +460,15 @@ Serial::SerialImpl::getFlowcontrol () const
 }
 
 void
+Serial::SerialImpl::purge()
+{
+	if (is_open_ == false) {
+		throw PortNotOpenedException("Serial::flush");
+	}
+	PurgeComm(fd_, PURGE_RXCLEAR | PURGE_TXCLEAR);
+}
+
+void
 Serial::SerialImpl::flush ()
 {
   if (is_open_ == false) {

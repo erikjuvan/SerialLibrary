@@ -349,6 +349,10 @@ Serial::getFlowcontrol () const
   return pimpl_->getFlowcontrol ();
 }
 
+void Serial::purge() {
+	pimpl_->purge();
+}
+
 void Serial::flush ()
 {
   ScopedReadLock rlock(this->pimpl_);

@@ -586,6 +586,8 @@ public:
   flowcontrol_t
   getFlowcontrol () const;  
 
+  void purge();
+
   /*! Flush the input and output buffers */
   void
   flush ();

@@ -786,6 +786,16 @@ Serial::SerialImpl::getFlowcontrol () const
 }
 
 void
+Serial::SerialImpl::purge ()
+{
+  if (is_open_ == false) {
+    throw PortNotOpenedException ("Serial::flush");
+  }
+  // don't know how to purge the buffer in unix
+}
+
+
+void
 Serial::SerialImpl::flush ()
 {
   if (is_open_ == false) {
