@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.11)
 
 project(SerialLibrary)
 
-set(CMAKE_CONFIGURATION_TYPES Debug Release CACHE TYPE INTERNAL)
+set(CMAKE_CONFIGURATION_TYPES "Debug;Release") 
 
 set(CMAKE_DEBUG_POSTFIX "-d")
 
