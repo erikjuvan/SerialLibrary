@@ -35,7 +35,7 @@ endif (WIN32)
 if (UNIX)
 target_sources(${PROJECT_NAME} PRIVATE
 	src/impl/unix.cpp
-	src/impl/list_ports/list_ports_unix.cpp
+	src/impl/list_ports/list_ports_linux.cpp
 )
 
 target_sources(${PROJECT_NAME} PRIVATE
