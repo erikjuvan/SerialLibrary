@@ -12,6 +12,7 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_17)
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 
+target_link_libraries(${PROJECT_NAME} setupapi)
 target_sources(${PROJECT_NAME} PRIVATE
 	src/serial.cpp
 )
